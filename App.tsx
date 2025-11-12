@@ -1,18 +1,24 @@
 import React from 'react';
-import {View, Text, Image, ScrollView, TextInput, ImageBackground, StyleSheet} from 'react-native';
+import {View, Text, Image, ScrollView, TextInput, ImageBackground, StyleSheet, Button} from 'react-native';
 
-
-const App = () => {
+const App = ({ navigation }) => {
   return (
 <ImageBackground source={require('./assets/map.jpg')} style={styles.background}>
       <View style={styles.busContainer}>
         <Text style={styles.boxtext}>Board the PRT 71C {"\n"}Millvale bus</Text>
 
       </View>
+
       <View style={styles.busContainer1}>
               <Text style={styles.boxtext1}>9:39         30         9.9{"\n"}Arrival     Min       Miles </Text>
 
             </View>
+<View style={styles.buttonContainer}>
+        <Button
+          title="View Details"
+          onPress={() => navigation.navigate("details", { itemId: 42 })}
+        />
+      </View>
 </ImageBackground>
   );
 };
