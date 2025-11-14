@@ -32,6 +32,8 @@ export default function HomeScreen({ navigation }: Props) {
         onPress={() => navigation.navigate("Profile", { name })}
       />
     </View>
+
+
   );
 }
 
