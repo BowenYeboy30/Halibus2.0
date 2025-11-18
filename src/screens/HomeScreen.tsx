@@ -31,7 +31,13 @@ export default function HomeScreen({ navigation }: Props) {
         title="Go to Profile (with param)"
         onPress={() => navigation.navigate("Profile", { name })}
       />
+      <View style={{ height: 12 }} />
+            <Button
+              title="Go to Test"
+              onPress={() => navigation.navigate("Test")}
+            />
     </View>
+
 
 
   );

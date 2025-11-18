@@ -1,5 +1,9 @@
 import React from 'react';
 import {View, Text, Image, ScrollView, TextInput, ImageBackground, StyleSheet, Button} from 'react-native';
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../navigation/types";
+
+type Props = NativeStackScreenProps<RootStackParamList, "test">;
 
 const App = ({ navigation }) => {
   return (

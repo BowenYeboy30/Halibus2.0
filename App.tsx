@@ -8,6 +8,7 @@ import { enableScreens } from "react-native-screens";
 import HomeScreen from "./src/screens/HomeScreen";
 import DetailsScreen from "./src/screens/DetailsScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
+import test from "./src/screens/test";
 import { RootStackParamList } from "./src/navigation/types";
 
 enableScreens(true);
