@@ -5,8 +5,8 @@ import { RootStackParamList } from "../navigation/types";
 
 type Props = NativeStackScreenProps<RootStackParamList, "test">;
 
-const App = ({ navigation }) => {
-  return (
+export default function test({ route, navigation }: Props) {
+    return (
 <ImageBackground source={require('./assets/map.jpg')} style={styles.background}>
       <View style={styles.busContainer}>
         <Text style={styles.boxtext}>Board the PRT 71C {"\n"}Millvale bus</Text>

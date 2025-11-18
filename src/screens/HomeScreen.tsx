@@ -34,7 +34,7 @@ export default function HomeScreen({ navigation }: Props) {
       <View style={{ height: 12 }} />
             <Button
               title="Go to Test"
-              onPress={() => navigation.navigate("Test")}
+              onPress={() => navigation.navigate("test")}
             />
     </View>
 
