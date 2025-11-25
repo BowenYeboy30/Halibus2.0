@@ -13,7 +13,7 @@ export default function DetailsScreen({ route, navigation }: Props) {
         <Text style={styles.boxtext}>Board the PRT 71C {"\n"}Millvale bus</Text>
       </View>
 
-      <View style={{ height: 593 }} />
+      <View style={{ height: 643 }} />
 
       <View style={styles.boxRow}>
         <Text style={styles.boxtext1}>
