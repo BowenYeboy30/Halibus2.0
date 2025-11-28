@@ -53,7 +53,7 @@ import * as React from "react";
            style={styles.button}
            onPress={() => navigation.navigate("Details", { itemId: 42 })}
          >
-           <Text style={styles.buttonText}>Go to Details</Text>
+           <Text style={styles.buttonText}>71C</Text>
          </TouchableOpacity>
 
          <TouchableOpacity
@@ -65,7 +65,7 @@ import * as React from "react";
 
          <TouchableOpacity
            style={styles.button}
-           onPress={() => navigation.navigate("test")}
+           onPress={() => navigation.navigate("Warning")}
          >
            <Text style={styles.buttonText}>Go to Test</Text>
          </TouchableOpacity>
