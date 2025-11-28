@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet, ImageBackground } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/types";
 
@@ -22,6 +22,7 @@ export default function DetailsScreen({ route, navigation }: Props) {
         <Button title="Go back" onPress={() => navigation.goBack()} />
       </View>
     </View>
+
   );
 }
 
