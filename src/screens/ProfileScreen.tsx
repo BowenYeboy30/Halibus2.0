@@ -11,7 +11,9 @@ export default function ProfileScreen({ route, navigation }: Props) {
     <View style={styles.container}>
       <Text style={styles.title}>Profile</Text>
       <Text style={styles.paragraph}>Hello, {name}!</Text>
-      <Button title="Pop to top" onPress={() => navigation.popToTop()} />
+            <View style={{ height: 643 }} />
+
+      <Button title="Save and exit" onPress={() => navigation.popToTop()} />
     </View>
   );
 }

@@ -5,15 +5,15 @@ import * as React from "react";
  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
- type Props = NativeStackScreenProps<RootStackParamList, "Home">;
+ type Props = NativeStackScreenProps<RootStackParamList, "Planning">;
 
- export default function HomeScreen({ navigation }: Props) {
+ export default function PlanningScreen({ navigation }: Props) {
    const [name, setName] = React.useState("");
 
    const handleTextChange = (text: string) => {
      setName(text);
      if (text.trim().toLowerCase() === "waterfront amc".toLowerCase()) {
-       navigation.navigate("Planning");
+       navigation.navigate("Details", { itemId: 42 });
      }
    };
 
@@ -30,7 +30,7 @@ import * as React from "react";
 
          <TouchableOpacity
            style={styles.circle}
-           onPress={() => navigation.navigate("Settings")}
+           onPress={() => navigation.navigate("Setting")}
          >
            <Text style={styles.circleText}>S</Text>
          </TouchableOpacity>
@@ -45,36 +45,35 @@ import * as React from "react";
        </View>
 
        <View style={styles.contentArea}>
-         <TextInput
-           value={name}
-           onChangeText={handleTextChange}
-           placeholder="Enter a name"
-           style={styles.input}
-         />
+                 <TextInput
+                   value="From: My Location                                   To: Waterfront AMC"
+                   editable={false}
+                   style={styles.input}
+                 />
 
          <TouchableOpacity
            style={styles.button}
-           onPress={() => navigation.navigate("Planning", { itemId: 42 })}
+           onPress={() => navigation.navigate("Details", { itemId: 42 })}
          >
-           <Text style={styles.buttonText}>71C                                       30 mins      ></Text>
+           <Text style={styles.buttonText}>61D                                         6 mins      ></Text>
          </TouchableOpacity>
 
          <TouchableOpacity
-           style={styles.button}
+           style={styles.button1}
 /*
            onPress={() => navigation.navigate("Profile", { name })}
  */
          >
-           <Text style={styles.buttonText}>61B                                       15 mins      ></Text>
+           <Text style={styles.buttonText}>61C                                       15 mins      ></Text>
          </TouchableOpacity>
 
          <TouchableOpacity
-           style={styles.button}
+           style={styles.button2}
 /*
            onPress={() => navigation.navigate("Warning")}
  */
          >
-           <Text style={styles.buttonText}>28X                                       26 mins      ></Text>
+           <Text style={styles.buttonText}>53L                                       26 mins      ></Text>
          </TouchableOpacity>
        </View>
      </View>
@@ -117,13 +116,29 @@ import * as React from "react";
 
    },
    button: {
-     backgroundColor: "#D3D3D3",
+     backgroundColor: "#5CE65C",
      paddingVertical: 12,
      paddingHorizontal: 20,
      borderRadius: 8,
      alignItems: "center",
      marginTop: 12,
    },
+   button1: {
+        backgroundColor: "#FFEE8C",
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        borderRadius: 8,
+        alignItems: "center",
+        marginTop: 12,
+      },
+  button2: {
+       backgroundColor: "#FFA500",
+       paddingVertical: 12,
+       paddingHorizontal: 20,
+       borderRadius: 8,
+       alignItems: "center",
+       marginTop: 12,
+     },
    buttonText: {
      fontSize: 16,
      fontWeight: "600",
