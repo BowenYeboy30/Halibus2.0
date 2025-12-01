@@ -8,9 +8,11 @@ export default function DetailsScreen({ route, navigation }: Props) {
   const { itemId } = route.params;
 
   return (
+             <ImageBackground source={require('/Users/bobby/Downloads/INFSCI1430/IntroReact/assets/map.jpg')} style={styles.background}>
+
     <View style={styles.container}>
       <View style={styles.box}>
-        <Text style={styles.boxtext}>Board the PRT 71C {"\n"}Millvale bus</Text>
+        <Text style={styles.boxtext}>Board the PRT 61D {"\n"}Millvale bus</Text>
       </View>
 
       <View style={{ height: 643 }} />
@@ -19,10 +21,10 @@ export default function DetailsScreen({ route, navigation }: Props) {
         <Text style={styles.boxtext1}>
           9:39         30         9.9{"\n"}Arrival     Min       Miles
         </Text>
-        <Button title="Go back" onPress={() => navigation.goBack()} />
+        <Button title="Go back" onPress={() => navigation.navigate("Warning")} />
       </View>
     </View>
-
+     </ImageBackground>
   );
 }
 
@@ -46,4 +48,8 @@ const styles = StyleSheet.create({
   },
   boxtext: { fontSize: 28 },
   boxtext1: { fontSize: 20, flex: 1 },
+  background: {
+           flex: 1,
+           resizeMode: 'cover',
+           }
 });
