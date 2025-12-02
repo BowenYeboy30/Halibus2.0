@@ -2,7 +2,8 @@ import * as React from "react";
  import { View, Text, TextInput, StyleSheet, TouchableOpacity,ImageBackground } from "react-native";
  import { NativeStackScreenProps } from "@react-navigation/native-stack";
  import { RootStackParamList } from "../navigation/types";
- import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+ import {Ionicons} from '@react-native-vector-icons/ionicons';
+import map from '../../assets/map.jpg';
 
 
  type Props = NativeStackScreenProps<RootStackParamList, "Planning">;
@@ -18,31 +19,33 @@ import * as React from "react";
    };
 
    return (
-       <ImageBackground source={require('/Users/bobby/Downloads/INFSCI1430/IntroReact/assets/map.jpg')} style={styles.background}>
+<ImageBackground source={map} style={styles.background}>
      <View style={styles.container}>
        <View style={styles.circleContainer}>
-         <TouchableOpacity
-           style={styles.circle}
-           onPress={() => navigation.navigate("Profile", { name })}
-         >
-           <Text style={styles.circleText}>P</Text>
-         </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.circle}
+                  onPress={() => navigation.navigate("Profile", { name })}
+                >
+                  {/*}<Text style={styles.circleText}>P</Text> */}
+                  <Ionicons name="person-outline" size={35} color="black"/>
+                </TouchableOpacity>
 
-         <TouchableOpacity
-           style={styles.circle}
-           onPress={() => navigation.navigate("Setting")}
-         >
-           <Text style={styles.circleText}>S</Text>
-         </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.circle}
+                  onPress={() => navigation.navigate("Setting")}
+                >
+                           <Ionicons name="cog-outline" size={35} color="black"/>
 
-         <View style={styles.circle}>
-           <Text style={styles.circleText}>Q</Text>
-         </View>
+                </TouchableOpacity>
 
-         <View style={styles.circle}>
-           <Text style={styles.circleText}>R</Text>
-         </View>
-       </View>
+                <View style={styles.circle}>
+                  <Ionicons name="help-circle-outline" size={35} color="black"/>
+                </View>
+
+                <View style={styles.circle}>
+                  <Ionicons name="volume-high-outline" size={30} color="black"/>
+                </View>
+              </View>
 
        <View style={styles.contentArea}>
                  <TextInput

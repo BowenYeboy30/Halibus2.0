@@ -26,7 +26,7 @@ export default function WarningScreen({ navigation }: Props) {
         style={styles.button}
         onPress={() => navigation.navigate("Home")}
       >
-        <Text style={styles.buttonText}>Cancel Route</Text>
+        <Text style={styles.buttonText1}>Cancel Route</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
@@ -52,5 +52,8 @@ const styles = StyleSheet.create({
     marginTop: 12,
     width: "80%",
   },
+
   buttonText: { fontSize: 16, fontWeight: "600", color: "#000", textAlign: "center" },
+  buttonText1: { fontSize: 16, fontWeight: "600", color: "#FF0000", textAlign: "center" },
+
 });

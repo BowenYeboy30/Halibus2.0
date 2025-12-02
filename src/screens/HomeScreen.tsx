@@ -3,6 +3,8 @@ import * as React from "react";
  import { NativeStackScreenProps } from "@react-navigation/native-stack";
  import { RootStackParamList } from "../navigation/types";
  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import map from '../../assets/map.jpg';
+ import {Ionicons} from '@react-native-vector-icons/ionicons';
 
 
  type Props = NativeStackScreenProps<RootStackParamList, "Home">;
@@ -18,29 +20,31 @@ import * as React from "react";
    };
 
    return (
-       <ImageBackground source={require('/Users/bobby/Downloads/INFSCI1430/IntroReact/assets/map.jpg')} style={styles.background}>
+<ImageBackground source={map} style={styles.background}>
      <View style={styles.container}>
        <View style={styles.circleContainer}>
          <TouchableOpacity
            style={styles.circle}
            onPress={() => navigation.navigate("Profile", { name })}
          >
-           <Text style={styles.circleText}>P</Text>
+           {/*}<Text style={styles.circleText}>P</Text> */}
+           <Ionicons name="person-outline" size={35} color="black"/>
          </TouchableOpacity>
 
          <TouchableOpacity
            style={styles.circle}
-           onPress={() => navigation.navigate("Settings")}
+           onPress={() => navigation.navigate("Setting")}
          >
-           <Text style={styles.circleText}>S</Text>
+                    <Ionicons name="cog-outline" size={35} color="black"/>
+
          </TouchableOpacity>
 
          <View style={styles.circle}>
-           <Text style={styles.circleText}>Q</Text>
+           <Ionicons name="help-circle-outline" size={35} color="black"/>
          </View>
 
          <View style={styles.circle}>
-           <Text style={styles.circleText}>R</Text>
+           <Ionicons name="volume-high-outline" size={30} color="black"/>
          </View>
        </View>
 
