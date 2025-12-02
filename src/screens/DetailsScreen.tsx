@@ -2,13 +2,13 @@ import * as React from "react";
 import { View, Text, Button, StyleSheet, ImageBackground } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/types";
-
+import map from '../../assets/map.jpg';
 type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 export default function DetailsScreen({ route, navigation }: Props) {
   const { itemId } = route.params;
 
   return (
-             <ImageBackground source={require('/Users/bobby/Downloads/INFSCI1430/IntroReact/assets/map.jpg')} style={styles.background}>
+             <ImageBackground source={map} style={styles.background}>
 
     <View style={styles.container}>
       <View style={styles.box}>
