@@ -3,6 +3,7 @@ import { View, Text, Button, StyleSheet, ImageBackground } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/types";
 import map from '../../assets/map.jpg';
+
 type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 export default function DetailsScreen({ route, navigation }: Props) {
   const { itemId } = route.params;
@@ -19,7 +20,7 @@ export default function DetailsScreen({ route, navigation }: Props) {
 
       <View style={styles.boxRow}>
         <Text style={styles.boxtext1}>
-          9:39         30         9.9{"\n"}Arrival     Min       Miles
+          9:39AM         30         9.9{"\n"}Arrival            Min       Miles
         </Text>
         <Button title="Go back" onPress={() => navigation.navigate("Warning")} />
       </View>
