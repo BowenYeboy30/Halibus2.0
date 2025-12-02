@@ -1,4 +1,4 @@
-# IntroReact
+# Halibus APP
 
 **Create a new React Native project**
 * In terminal, at whatever folder you want your project in:
@@ -21,6 +21,9 @@ In addition to your app initialization, you need to install navigation component
 * npm install @react-navigation/native @react-navigation/native-stack
 * npm install react-native-screens react-native-safe-area-context
 
+To ensure the icons are loaded, please run:
+*  npm install @react-native-vector-icons/ionicons
+
 
 **Folder Structure**
 
@@ -29,6 +32,9 @@ In addition to your app initialization, you need to install navigation component
         * HomeScreen.tsx
         * DetailsScreen.tsx
         * ProfileScreen.tsx
+        * SettingScreen.tsx
+        * WarningScreen.tsx
+        * PlanningScreen.tsx
    * navigation/
       * types.ts
 * App.tsx
