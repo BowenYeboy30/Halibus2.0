@@ -3,7 +3,7 @@ import * as React from "react";
  import { NativeStackScreenProps } from "@react-navigation/native-stack";
  import { RootStackParamList } from "../navigation/types";
  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import map from '../../assets/map.jpg';
 
  type Props = NativeStackScreenProps<RootStackParamList, "Home">;
 
@@ -18,7 +18,7 @@ import * as React from "react";
    };
 
    return (
-       <ImageBackground source={require('/Users/bobby/Downloads/INFSCI1430/IntroReact/assets/map.jpg')} style={styles.background}>
+       <ImageBackground source={map} style={styles.background}>
      <View style={styles.container}>
        <View style={styles.circleContainer}>
          <TouchableOpacity
