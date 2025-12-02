@@ -28,7 +28,7 @@ import map from '../../assets/map.jpg';
            onPress={() => navigation.navigate("Profile", { name })}
          >
            {/*}<Text style={styles.circleText}>P</Text> */}
-           <Ionicons name="person-outline" size={35} color="black"/>
+           <Ionicons name="person-outline" size={30} color="black"/>
          </TouchableOpacity>
 
          <TouchableOpacity
@@ -48,11 +48,13 @@ import map from '../../assets/map.jpg';
          </View>
        </View>
 
+            <View style={{ height: 620 }} />
+
        <View style={styles.contentArea}>
          <TextInput
            value={name}
            onChangeText={handleTextChange}
-           placeholder="Enter a name"
+           placeholder="Where do you want to go?"
            style={styles.input}
          />
 
@@ -109,15 +111,17 @@ import map from '../../assets/map.jpg';
      color: "#000",
    },
    contentArea: {
-     marginTop: 500,
+
+     borderRadius: 25,
+     padding: 20,
+     backgroundColor: "#aaaaaa",
    },
    input: {
      borderWidth: 1,
      borderColor: "#ccc",
      padding: 10,
      borderRadius: 8,
-     marginTop: 120,
-          backgroundColor: "#D3D3D3",
+     backgroundColor: "#D3D3D3",
 
    },
    button: {
@@ -127,6 +131,7 @@ import map from '../../assets/map.jpg';
      borderRadius: 8,
      alignItems: "center",
      marginTop: 12,
+     boxShadow: '5px 5px 10px rgba(0.3, 0.3, 0.3, 0.3)',
    },
    buttonText: {
      fontSize: 16,
