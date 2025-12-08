@@ -49,7 +49,7 @@
    },
    label: { fontSize: 18, fontWeight: "500" },
    button: {
-     backgroundColor: "#FFEE8C",
+     backgroundColor: "#FFD700",
      paddingVertical: 12,
      borderRadius: 8,
      alignItems: "center",

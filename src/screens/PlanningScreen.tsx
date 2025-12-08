@@ -3,7 +3,7 @@ import * as React from "react";
  import { NativeStackScreenProps } from "@react-navigation/native-stack";
  import { RootStackParamList } from "../navigation/types";
  import {Ionicons} from '@react-native-vector-icons/ionicons';
-import map from '../../assets/map.jpg';
+import map from '../../assets/map3.png';
 
 
  type Props = NativeStackScreenProps<RootStackParamList, "Planning">;
