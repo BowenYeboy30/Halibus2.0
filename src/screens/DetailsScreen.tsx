@@ -2,7 +2,7 @@ import * as React from "react";
 import { View, Text, Button, StyleSheet, ImageBackground } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../navigation/types";
-import map from '../../assets/map.jpg';
+import map from '../../assets/map4.png';
 
 type Props = NativeStackScreenProps<RootStackParamList, "Details">;
 export default function DetailsScreen({ route, navigation }: Props) {

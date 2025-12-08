@@ -39,6 +39,7 @@ export default function App() {
               ? `${route.params.name}'s Profile`
               : "Profile",
           })
+
       }
         />
         <Stack.Screen name="Warning" component={WarningScreen}           options={{ headerShown: false }}
